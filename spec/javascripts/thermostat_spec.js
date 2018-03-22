@@ -47,4 +47,35 @@ describe('Thermostat', function() {
       expect(window.alert).toHaveBeenCalledWith("Max temp is ??");
     });
   });
+
+  describe('psmOn', function() {
+    it('should set max temp to 25 degrees', function() {
+      thermostat.psmOn();
+      expect(thermostat.maxTemp).toEqual(25);
+    });
+
+    it('should set powerSavingMode to true', function() {
+      thermostat.psmOn();
+      expect(thermostat.powerSavingMode).toEqual(true);
+    });
+  });
+
+  describe('psmOff', function() {
+    it('should set max temp to 32 degrees', function() {
+      thermostat.psmOff();
+      expect(thermostat.maxTemp).toEqual(32);
+    });
+
+    it('should set powerSavingMode to true', function() {
+      thermostat.psmOff();
+      expect(thermostat.powerSavingMode).toEqual(false);
+    });
+  });
+
+  describe('reset', function() {
+    it('should reset the temp to 20 degrees', function() {
+      thermostat.reset();
+      expect(thermostat.temperature).toEqual(20);
+    });
+  });
 });

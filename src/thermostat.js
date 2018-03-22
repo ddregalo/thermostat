@@ -12,3 +12,17 @@ Thermostat.prototype.increase = function(degrees) {
 Thermostat.prototype.decrease = function(degrees) {
   this.temperature -= degrees;
 };
+
+Thermostat.prototype.psmOn = function() {
+  this.maxTemp = 25
+  this.powerSavingMode = true
+};
+
+Thermostat.prototype.psmOff = function() {
+  this.maxTemp = 32
+  this.powerSavingMode = false
+};
+
+Thermostat.prototype.reset = function() {
+  this.temperature = 20
+};

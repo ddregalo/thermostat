@@ -1,5 +1,7 @@
 function Thermostat() {
   this.temperature = 20;
+  this.minTemp = 10;
+  
 };
 
 Thermostat.prototype.increase = function(degrees) {

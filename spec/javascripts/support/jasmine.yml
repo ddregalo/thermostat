@@ -12,7 +12,7 @@
 #
 src_files:
   - public/javascripts/**/*.js
-
+  - src/*.js
 # stylesheets
 #
 # Return an array of stylesheet filepaths relative to src_dir to include before jasmine specs.
@@ -142,4 +142,3 @@ boot_files:
 # random: false
 #
 random:
-

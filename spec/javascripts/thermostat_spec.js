@@ -46,9 +46,9 @@ describe('Thermostat', function() {
     });
 
     it('should alert if thermostat temp is at min temp and set to min temp', function() {
-      thermostat.decrease(20);
       spyOn(window, 'alert');
-      expect(window.alert).toHaveBeenCalledWith("Max temp is ??");
+      thermostat.decrease(20);
+      expect(window.alert).toHaveBeenCalledWith("Min temp is 10");
     });
   });
 

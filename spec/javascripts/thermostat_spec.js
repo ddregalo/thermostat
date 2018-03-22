@@ -27,27 +27,31 @@ describe('Thermostat', function() {
   });
 
   describe('increase', function() {
-    it('should increase the temperature by desired amount', function() {
-      thermostat.increase(5);
-      expect(thermostat.temperature).toEqual(25);
+    it('should increase the temperature by 1 degree', function() {
+      thermostat.increase();
+      expect(thermostat.temperature).toEqual(21);
     });
 
     it('should alert if thermostat temp is at max temp and set to max temp', function() {
       spyOn(window, "alert");
-      thermostat.increase(50);
+      for (i=0; i<=6; i++) {
+        thermostat.increase();
+      };
       expect(window.alert).toHaveBeenCalledWith("Max temp is 25");
     });
   });
 
   describe('decrease', function() {
-    it('should decrease the temperature by desired amount', function() {
-      thermostat.decrease(5);
-      expect(thermostat.temperature).toEqual(15);
+    it('should decrease the temperature by 1 degree', function() {
+      thermostat.decrease();
+      expect(thermostat.temperature).toEqual(19);
     });
 
     it('should alert if thermostat temp is at min temp and set to min temp', function() {
       spyOn(window, 'alert');
-      thermostat.decrease(20);
+      for (i=0; i<=11; i++) {
+        thermostat.decrease();
+      };
       expect(window.alert).toHaveBeenCalledWith("Min temp is 10");
     });
   });

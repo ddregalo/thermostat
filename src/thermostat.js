@@ -6,20 +6,22 @@ function Thermostat() {
   this.currEnergyUsage = "medium-usage"
 };
 
-Thermostat.prototype.increase = function(degrees) {
-  if (this.temperature + degrees > this.maxTemp) {
+Thermostat.prototype.increase = function() {
+  if ((this.temperature + 1) > this.maxTemp) {
     this.temperature = this.maxTemp
-    alert("Max temp is 25");
+    alert(`Max temp is ${this.maxTemp}`);
+  } else {
+  this.temperature ++;
   };
-  this.temperature += degrees;
 };
 
-Thermostat.prototype.decrease = function(degrees) {
-  if (this.temperature - degrees < this.minTemp) {
+Thermostat.prototype.decrease = function() {
+  if (this.temperature - 1 < this.minTemp) {
     this.temperature = this.minTemp
     alert("Min temp is 10");
+  } else {
+  this.temperature --;
   };
-  this.temperature -= degrees;
 };
 
 Thermostat.prototype.psmOn = function() {

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>THERMOSTAT x Dd</title>
+    <style>
+      h1 {
+        font-size: 50px;
+        font-family: "Didot";
+        font-weight: 200;
+        text-align: center;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-size: 16px;
+        font-family: "Avenir";
+        font-weight: 200;
+        text-align: center;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+      }
+
+      button {
+        font-size: 12px;
+        font-family: "Avenir";
+        font-weight: 200;
+        text-align: center;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        border-radius: 5px;
+      }
+      button:focus {
+        outline: black;
+      }
+    </style>
+  </head>
+  <body>
+    <br>
+    <br>
+    <h1>Thermostat</h1>
+    <hr>
+    <br>
+    <h1 id="tempdisplay"></h1>
+    <br>
+    <p>Current Temperature</p>
+    <br>
+    <br>
+    <p>
+      <button id="increase">+</button>
+      <button id="decrease">-</button>
+      <button id="reset">Reset</button>
+   </p>
+    <br>
+    <p>Power Saving Mode Is    <span id="powerSavingModeIs">on</span></p>
+
+    <p>
+      <button id="psmOn">Power Saving Mode On</button>
+      <button id="psmOff">Power Saving Mode Off</button>
+    </p>
+    <script src="thermostat.js"></script>
+  </body>
+</html>

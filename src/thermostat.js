@@ -7,6 +7,10 @@ function Thermostat() {
 };
 
 Thermostat.prototype.increase = function(degrees) {
+  if (this.temperature + degrees > this.maxTemp) {
+    this.temperature = this.maxTemp
+    alert("Max temp is 25");
+  };
   this.temperature += degrees;
 };
 

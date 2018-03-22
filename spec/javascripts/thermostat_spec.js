@@ -33,8 +33,8 @@ describe('Thermostat', function() {
     });
 
     it('should alert if thermostat temp is at max temp and set to max temp', function() {
+      spyOn(window, "alert");
       thermostat.increase(50);
-      spyOn(window, 'alert');
       expect(window.alert).toHaveBeenCalledWith("Max temp is 25");
     });
   });

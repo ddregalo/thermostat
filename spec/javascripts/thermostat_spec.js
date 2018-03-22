@@ -88,8 +88,23 @@ describe('Thermostat', function() {
   });
 
   describe('energyUsage', function() {
-    it('should return the current energy usage based on temp', function() {
+    it('should return medium energy usage based on temp', function() {
       expect(thermostat.energyUsage()).toEqual("medium-usage");
+    });
+
+    it('should return low energy usage based on temp', function() {
+      for (i=0; i<=5; i++) {
+        thermostat.decrease();
+      };
+      expect(thermostat.energyUsage()).toEqual("low-usage");
+    });
+
+    it('should return high energy usage based on temp', function() {
+      thermostat.psmOff();
+      for (i=0; i<=7; i++) {
+        thermostat.increase();
+      };
+      expect(thermostat.energyUsage()).toEqual("high-usage");
     });
   });
 });

@@ -22,16 +22,20 @@ describe('Thermostat', function() {
     expect(thermostat.powerSavingMode).toEqual(true);
   });
 
+  it('expects current energy usage to be medium', function() {
+    expect(thermostat.currEnergyUsage).toEqual("medium-usage");
+  });
+
   describe('increase', function() {
     it('should increase the temperature by desired amount', function() {
       thermostat.increase(5);
       expect(thermostat.temperature).toEqual(25);
     });
 
-    it('should alert if thermostat temp is at max temp', function() {
+    it('should alert if thermostat temp is at max temp and set to max temp', function() {
       thermostat.increase(50);
       spyOn(window, 'alert');
-      expect(window.alert).toHaveBeenCalledWith("Max temp is ??");
+      expect(window.alert).toHaveBeenCalledWith("Max temp is 25");
     });
   });
 
@@ -41,7 +45,7 @@ describe('Thermostat', function() {
       expect(thermostat.temperature).toEqual(15);
     });
 
-    it('should alert if thermostat temp is at min temp', function() {
+    it('should alert if thermostat temp is at min temp and set to min temp', function() {
       thermostat.decrease(20);
       spyOn(window, 'alert');
       expect(window.alert).toHaveBeenCalledWith("Max temp is ??");
@@ -76,6 +80,12 @@ describe('Thermostat', function() {
     it('should reset the temp to 20 degrees', function() {
       thermostat.reset();
       expect(thermostat.temperature).toEqual(20);
+    });
+  });
+
+  describe('energyUsage', function() {
+    it('should return the current energy usage based on temp', function() {
+      expect(thermostat.energyUsage()).toEqual("medium-usage");
     });
   });
 });

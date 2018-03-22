@@ -14,6 +14,14 @@ describe('Thermostat', function() {
     expect(thermostat.minTemp).toEqual(10);
   });
 
+  it('sets max temp to 25 degrees as default', function() {
+    expect(thermostat.maxTemp).toEqual(25);
+  });
+
+  it('sets power saving mode to true as default', function() {
+    expect(thermostat.powerSavingMode).toEqual(true);
+  });
+
   describe('increase', function() {
     it('should increase the temperature by desired amount', function() {
       thermostat.increase(5);

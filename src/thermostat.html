@@ -13,6 +13,15 @@
         text-transform: uppercase;
       }
 
+      h2 {
+        font-size: 75px;
+        font-family: "Courier";
+        font-weight: bolder;
+        text-align: center;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+
       p {
         font-size: 16px;
         font-family: "Avenir";
@@ -35,15 +44,15 @@
         outline: black;
       }
     </style>
+    <script src="jquery-3.3.1.js"></script>
+    <script src="thermostat.js" defer></script>
   </head>
   <body>
     <br>
     <br>
     <h1>Thermostat</h1>
     <hr>
-    <br>
-    <h1 id="tempdisplay"></h1>
-    <br>
+    <h2 id="tempdisplay"></h2>
     <p>Current Temperature</p>
     <br>
     <br>
@@ -53,12 +62,11 @@
       <button id="reset">Reset</button>
    </p>
     <br>
-    <p>Power Saving Mode Is    <span id="powerSavingModeIs">on</span></p>
+    <p>Power Saving Mode Is <span id="powerSavingModeIs">on</span></p>
 
     <p>
       <button id="psmOn">Power Saving Mode On</button>
       <button id="psmOff">Power Saving Mode Off</button>
     </p>
-    <script src="thermostat.js"></script>
   </body>
 </html>

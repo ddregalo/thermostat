@@ -29,7 +29,7 @@ $(document).ready( function() {
   });
 
   function showTemp() {
-    $('#tempdisplay').text(thermostat.temperature);
+    $('#tempdisplay').text(`${thermostat.temperature}` + "℃");
     $('#tempdisplay').attr("class", thermostat.energyUsage());
   };
 });

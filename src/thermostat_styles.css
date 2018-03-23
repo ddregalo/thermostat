@@ -8,12 +8,13 @@ h1 {
 }
 
 h2 {
-  font-size: 75px;
+  font-size: 100px;
   font-family: "Courier";
   font-weight: bolder;
   text-align: center;
   letter-spacing: 3px;
   text-transform: uppercase;
+  line-height: 5%;
 }
 
 p {
@@ -40,13 +41,13 @@ button:focus {
 }
 
 .low-usage {
-  color: green;
+  color: #1B9F27;
 }
 
 .medium-usage{
-  color: yellow;
+  color: #ECB413;
 }
 
 .high-usage {
-  color: red;
+  color: #C72F0A;
 }

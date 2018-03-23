@@ -1,5 +1,6 @@
 $(document).ready( function() {
 
+  var city = 'London'
   var thermostat = new Thermostat();
   showTemp();
 
@@ -32,4 +33,8 @@ $(document).ready( function() {
     $('#tempdisplay').text(`${thermostat.temperature}` + "℃");
     $('#tempdisplay').attr("class", thermostat.energyUsage());
   };
+
+  $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city +'&units=metric&APPID=c34768cec566dee714d9eb7c3c2bed97', function(city) {
+    $('#weather').html(city.main['temp'])
+  });
 });

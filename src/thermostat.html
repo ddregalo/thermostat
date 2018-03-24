@@ -26,9 +26,17 @@
       <button id="psmOff">Power Saving Mode Off</button>
     </p>
     <br>
-    <p>The weather in London is <span id="weather"></span></p>
+    <p>Find weather for your city</p>
+
+    <form id="findcity">
+      <input type="text" id="city" placeholder="Enter a city..."></input>
+      <button type="submit">Get Weather</button>
+    </form>
+
+    <p><span id="displaycity"></span><span id="weather"></span></p>
     <script src="jquery-3.3.1.js"></script>
     <script src="thermostat.js"></script>
     <script src="interface.js"></script>
+    <!-- &#8451; -->
   </body>
 </html>

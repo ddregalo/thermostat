@@ -36,6 +36,9 @@ p {
   text-transform: uppercase;
 }
 
+form {
+  text-align: center;
+}
 button {
   font-size: 12px;
   font-family: "Avenir";
